@@ -1,6 +1,6 @@
 
 import React from "react";
-import { FileText, TestTube, Pills, File } from "lucide-react";
+import { FileText, TestTube, Pill, File } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -39,7 +39,7 @@ const MedicalHistoryCard: React.FC = () => {
               </div>
               <div className="bg-gray-50 p-3 rounded-lg flex items-start">
                 <div className="bg-medical-secondary p-2 rounded-full mr-3">
-                  <Pills className="h-4 w-4 text-medical-primary" />
+                  <Pill className="h-4 w-4 text-medical-primary" />
                 </div>
                 <div>
                   <div className="text-sm font-medium">Current Medications</div>

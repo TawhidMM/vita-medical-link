@@ -1,10 +1,9 @@
-
 import React from "react";
 import MainLayout from "@/layouts/MainLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, TestTube, Pills, Calendar, History } from "lucide-react";
+import { FileText, TestTube, Pill, Calendar, History } from "lucide-react";
 
 const MedicalHistory: React.FC = () => {
   // Mock data for medical records
@@ -138,6 +137,14 @@ const MedicalHistory: React.FC = () => {
     },
   ];
 
+  // Function to handle tab change by ID
+  const handleTabChange = (tabId: string) => {
+    const tabElement = document.querySelector(`[data-value="${tabId}"]`);
+    if (tabElement) {
+      (tabElement as HTMLElement).click();
+    }
+  };
+
   return (
     <MainLayout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -194,7 +201,7 @@ const MedicalHistory: React.FC = () => {
                   <Button variant="outline" className="w-full mt-2" asChild>
                     <a href="#tests" onClick={(e) => {
                       e.preventDefault();
-                      document.querySelector('[data-value="tests"]')?.click();
+                      handleTabChange("tests");
                     }}>
                       View All Tests
                     </a>
@@ -205,7 +212,7 @@ const MedicalHistory: React.FC = () => {
               <Card>
                 <CardHeader className="bg-medical-primary text-white">
                   <CardTitle className="flex items-center">
-                    <Pills className="mr-2 h-5 w-5" />
+                    <Pill className="mr-2 h-5 w-5" />
                     Current Medications
                   </CardTitle>
                 </CardHeader>
@@ -220,7 +227,7 @@ const MedicalHistory: React.FC = () => {
                   <Button variant="outline" className="w-full mt-2" asChild>
                     <a href="#medications" onClick={(e) => {
                       e.preventDefault();
-                      document.querySelector('[data-value="medications"]')?.click();
+                      handleTabChange("medications");
                     }}>
                       View All Medications
                     </a>
@@ -269,7 +276,7 @@ const MedicalHistory: React.FC = () => {
                   <Button variant="outline" className="w-full mt-2" asChild>
                     <a href="#visits" onClick={(e) => {
                       e.preventDefault();
-                      document.querySelector('[data-value="visits"]')?.click();
+                      handleTabChange("visits");
                     }}>
                       View All Visits
                     </a>

@@ -1,9 +1,8 @@
-
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Calendar, FileText, TestTube, Pills, Clock, User } from "lucide-react";
+import { Calendar, FileText, TestTube, Pill, Clock, User } from "lucide-react";
 
 const PatientDashboard: React.FC = () => {
   return (
@@ -41,7 +40,7 @@ const PatientDashboard: React.FC = () => {
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <CardTitle className="text-base font-medium">Active Medications</CardTitle>
-              <Pills className="h-4 w-4 text-medical-primary" />
+              <Pill className="h-4 w-4 text-medical-primary" />
             </div>
           </CardHeader>
           <CardContent>

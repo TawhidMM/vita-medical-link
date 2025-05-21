@@ -1,4 +1,3 @@
-
 import React from "react";
 import MainLayout from "@/layouts/MainLayout";
 import Hero from "@/components/Hero";
@@ -8,7 +7,7 @@ import AppointmentManager from "@/components/AppointmentManager";
 import MedicalHistoryCard from "@/components/MedicalHistoryCard";
 import AIRecommendation from "@/components/AIRecommendation";
 import { Button } from "@/components/ui/button";
-import { Search, Calendar, FileText, User } from "lucide-react";
+import { Search, Calendar, FileText, User, TestTube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index: React.FC = () => {
