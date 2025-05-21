@@ -138,7 +138,7 @@ const Doctors: React.FC = () => {
                         <SelectValue placeholder="All Specialties" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="">All Specialties</SelectItem>
+                        <SelectItem value="all">All Specialties</SelectItem>
                         <SelectItem value="Cardiologist">Cardiologist</SelectItem>
                         <SelectItem value="Neurologist">Neurologist</SelectItem>
                         <SelectItem value="Dermatologist">Dermatologist</SelectItem>
